@@ -1,0 +1,10 @@
+import fs from 'fs';
+import path from 'path';
+import bcrypt from 'bcrypt';
+const DATA_DIR = path.join(process.cwd(),'data');
+if(!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR,{ recursive:true });
+const adminPass = process.env.INIT_ADMIN_PASS || 'admin123';
+const hash = await bcrypt.hash(adminPass, 10);
+const users = [{ id:1, name:'Admin Lore', email:'admin@lore.com', password: hash, role:'admin' }];
+fs.writeFileSync(path.join(DATA_DIR,'users.json'), JSON.stringify(users,null,2));
+console.log('Users initialized. admin@lore.com /', adminPass);

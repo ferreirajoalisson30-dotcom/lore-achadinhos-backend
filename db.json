@@ -1,0 +1,183 @@
+{
+  "site": {
+    "nome": "Lore Achadinhos",
+    "slogan": "Pequenos achados, grandes encantos 💖",
+    "moeda": "BRL",
+    "versao": "1.0.0",
+    "tema": {
+      "primaria": "#e26fa5",
+      "secundaria": "#f9d8e6",
+      "destaque": "#ffb6c1",
+      "texto": "#333333"
+    }
+  },
+
+  "categorias": [
+    { "id": 1, "nome": "Roupas Femininas", "slug": "roupas-femininas", "icone": "shirt" },
+    { "id": 2, "nome": "Acessórios", "slug": "acessorios", "icone": "sparkles" },
+    { "id": 3, "nome": "Beleza e Cuidados", "slug": "beleza-cuidados", "icone": "heart" },
+    { "id": 4, "nome": "Casa e Lifestyle", "slug": "casa-lifestyle", "icone": "home" },
+    { "id": 5, "nome": "Ofertas do Dia", "slug": "ofertas-do-dia", "icone": "tag" }
+  ],
+
+  "produtos": [
+    {
+      "id": 101,
+      "nome": "Vestido Floral Encanto",
+      "descricao": "Vestido leve e confortável, perfeito para dias ensolarados.",
+      "preco": 179.90,
+      "estoque": 12,
+      "categoriaId": 1,
+      "imagens": [
+        "https://cdn.loreachadinhos.com/produtos/vestido-floral-1.jpg",
+        "https://cdn.loreachadinhos.com/produtos/vestido-floral-2.jpg"
+      ],
+      "avaliacao": 4.8,
+      "destaque": true,
+      "tags": ["feminino", "floral", "verão", "novo"]
+    },
+    {
+      "id": 102,
+      "nome": "Colar Coração Dourado",
+      "descricao": "Acessório delicado que combina com qualquer look.",
+      "preco": 89.50,
+      "estoque": 25,
+      "categoriaId": 2,
+      "imagens": [
+        "https://cdn.loreachadinhos.com/produtos/colar-coracao-1.jpg"
+      ],
+      "avaliacao": 4.9,
+      "destaque": true,
+      "tags": ["dourado", "joia", "presente"]
+    },
+    {
+      "id": 103,
+      "nome": "Kit Skincare Glow",
+      "descricao": "Conjunto facial com hidratante, tônico e sérum natural.",
+      "preco": 229.00,
+      "estoque": 8,
+      "categoriaId": 3,
+      "imagens": [
+        "https://cdn.loreachadinhos.com/produtos/skincare-glow-1.jpg"
+      ],
+      "avaliacao": 4.7,
+      "destaque": false,
+      "tags": ["beleza", "skincare", "autoestima"]
+    },
+    {
+      "id": 104,
+      "nome": "Difusor Aromático Rosé",
+      "descricao": "Difusor de ambiente com essência floral suave e elegante.",
+      "preco": 139.90,
+      "estoque": 15,
+      "categoriaId": 4,
+      "imagens": [
+        "https://cdn.loreachadinhos.com/produtos/difusor-rose.jpg"
+      ],
+      "avaliacao": 4.6,
+      "destaque": false,
+      "tags": ["casa", "aroma", "decoracao"]
+    }
+  ],
+
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Ana Souza",
+      "email": "ana.souza@example.com",
+      "telefone": "(11) 98888-1122",
+      "endereco": {
+        "rua": "Rua das Rosas, 321",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "04500-000"
+      },
+      "historicoPedidos": [1, 2]
+    },
+    {
+      "id": 2,
+      "nome": "Mariana Oliveira",
+      "email": "mariana.oliveira@example.com",
+      "telefone": "(21) 97777-3344",
+      "endereco": {
+        "rua": "Av. Atlântica, 1200",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "cep": "22021-001"
+      },
+      "historicoPedidos": [3]
+    }
+  ],
+
+  "pedidos": [
+    {
+      "id": 1,
+      "clienteId": 1,
+      "produtos": [
+        { "produtoId": 101, "quantidade": 1 },
+        { "produtoId": 102, "quantidade": 2 }
+      ],
+      "status": "entregue",
+      "total": 358.90,
+      "data": "2025-10-10T10:20:00"
+    },
+    {
+      "id": 2,
+      "clienteId": 1,
+      "produtos": [
+        { "produtoId": 103, "quantidade": 1 }
+      ],
+      "status": "aguardando_pagamento",
+      "total": 229.00,
+      "data": "2025-10-22T18:45:00"
+    },
+    {
+      "id": 3,
+      "clienteId": 2,
+      "produtos": [
+        { "produtoId": 104, "quantidade": 1 }
+      ],
+      "status": "entregue",
+      "total": 139.90,
+      "data": "2025-10-15T16:30:00"
+    }
+  ],
+
+  "afiliados": [
+    {
+      "id": 1,
+      "nome": "Blog da Luh",
+      "codigo": "LUH10",
+      "percentualComissao": 10,
+      "cliques": 320,
+      "vendas": 12
+    },
+    {
+      "id": 2,
+      "nome": "Mundo da Beleza",
+      "codigo": "BELEZA15",
+      "percentualComissao": 15,
+      "cliques": 410,
+      "vendas": 18
+    }
+  ],
+
+  "analytics": {
+    "visitantes": 1423,
+    "vendasHoje": 7,
+    "ticketMedio": 214.30,
+    "maisVendido": "Vestido Floral Encanto",
+    "produtosEmAlta": [101, 102],
+    "ultimasAtualizacoes": "2025-10-23T09:00:00"
+  },
+
+  "configuracoes": {
+    "modoManutencao": false,
+    "metodosPagamento": ["pix", "cartao", "boleto"],
+    "entrega": {
+      "prazoMinimo": 2,
+      "prazoMaximo": 7,
+      "freteGratisAcimaDe": 299.00
+    }
+  }
+}

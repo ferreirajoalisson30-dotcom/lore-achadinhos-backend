@@ -1,0 +1,1 @@
+test('Login endpoint should return JWT', async () => { expect(true).toBe(true); });

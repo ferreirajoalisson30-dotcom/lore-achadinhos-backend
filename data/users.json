@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1761269100946,
+    "email": "admin@loreachadinhos.com",
+    "password": "$2b$10$yfENLaeaCS.4FuFmTsLG..vWxaE6r/6LoW3.2PYJImYj3EMnAZ65C",
+    "createdAt": "2025-10-24T01:25:00.946Z"
+  },
+  {
+    "id": 1761360648971,
+    "email": "admin@lore.com",
+    "password": "$2b$10$H1NKr2DEPFKt5jE1fXdXCepSUQahpHRHZCdJ6WIBO4CGJp7k/6Suy",
+    "createdAt": "2025-10-25T02:50:48.971Z"
+  }
+]
