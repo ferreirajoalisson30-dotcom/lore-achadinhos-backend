@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Bolsa Feminina Elegante",
+    "price": 179.9,
+    "image": "https://i.imgur.com/1.jpg",
+    "description": "Bolsa moderna com acabamento premium."
+  },
+  {
+    "id": 2,
+    "name": "Sandália Rosa Pastel",
+    "price": 129.9,
+    "image": "https://i.imgur.com/2.jpg",
+    "description": "Sandália feminina leve e confortável."
+  },
+  {
+    "id": 3,
+    "name": "Vestido Floral Lilás",
+    "price": 219.9,
+    "image": "https://i.imgur.com/3.jpg",
+    "description": "Vestido elegante para ocasiões especiais."
+  }
+]
