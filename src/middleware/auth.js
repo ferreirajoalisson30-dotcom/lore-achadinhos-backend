@@ -1,21 +1,17 @@
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
-import User from '../models/User.js';
-dotenv.config();
-const secret = process.env.JWT_SECRET || 'dev_secret';
+// backend/src/middleware/auth.js
+import jwt from "jsonwebtoken";
+const JWT_SECRET = process.env.JWT_SECRET || "lore-secret-dev";
 
-export const requireAuth = (role) => async (req,res,next) => {
-  try{
-    const authHeader = req.headers.authorization;
-    if(!authHeader) return res.status(401).json({ message: 'Token required' });
-    const token = authHeader.split(' ')[1];
-    const payload = jwt.verify(token, secret);
-    const user = await User.findById(payload.id).select('-password');
-    if(!user) return res.status(401).json({ message: 'Usuário inválido' });
-    if(role && user.role !== role) return res.status(403).json({ message: 'Acesso negado' });
-    req.user = user;
+export function requireAdmin(req, res, next) {
+  try {
+    const auth = req.headers.authorization;
+    if (!auth) return res.status(401).json({ error: "No token provided" });
+    const token = auth.split(" ")[1];
+    const payload = jwt.verify(token, JWT_SECRET);
+    if (!payload || payload.role !== "admin") return res.status(403).json({ error: "Forbidden: admin only" });
+    req.user = payload;
     next();
-  }catch(err){
-    res.status(401).json({ message: 'Token inválido' });
+  } catch (err) {
+    res.status(401).json({ error: "Invalid token: " + err.message });
   }
-};
+}
